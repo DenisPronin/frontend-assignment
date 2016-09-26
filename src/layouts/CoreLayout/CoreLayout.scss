@@ -1,3 +1,20 @@
 .mainContainer {
-  padding-top:20px;
+  padding-left: 250px;
+}
+
+.sidebarContainer {
+  background: #eee;
+  height: 100%;
+  left: 250px;
+  margin-left: -250px;
+  width: 250px;
+  overflow-y: auto;
+  padding: 20px;
+  position: fixed;
+}
+
+.contentContainer {
+  padding: 20px;
+  position: relative;
+  width: 100%;
 }

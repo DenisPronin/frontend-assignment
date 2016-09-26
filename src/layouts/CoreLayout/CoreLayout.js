@@ -1,19 +1,25 @@
-import React from 'react'
-import Header from '../../components/Header'
+import React, { PropTypes } from 'react'
 import classes from './CoreLayout.scss'
 import '../../styles/core.scss'
 
-export const CoreLayout = ({ children }) => (
-  <div className='container text-center'>
-    <Header />
-    <div className={classes.mainContainer}>
-      {children}
+import Sidebar from '../../components/Sidebar/Sidebar'
+import Grid from '../../components/Grid/Grid'
+
+export const CoreLayout = ({markers}) => (
+  <div className={classes.mainContainer}>
+    <div className={classes.sidebarContainer}>
+      <Sidebar
+        markers={markers}
+      />
+    </div>
+    <div className={classes.contentContainer}>
+      <Grid />
     </div>
   </div>
 )
 
 CoreLayout.propTypes = {
-  children: React.PropTypes.element.isRequired
-}
+  markers: PropTypes.object.isRequired
+};
 
 export default CoreLayout

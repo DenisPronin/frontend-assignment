@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux'
 import { routerReducer as router } from 'react-router-redux'
+import markers from '../modules/markers'
 
 export const makeRootReducer = (asyncReducers) => {
   return combineReducers({
     // Add sync reducers here
     router,
+    markers,
     ...asyncReducers
   })
 }
